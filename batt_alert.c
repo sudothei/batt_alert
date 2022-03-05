@@ -4,7 +4,7 @@
 #include <unistd.h>
 
 int interval = 1;
-int threshold = 100;
+int threshold = 10;
 
 int check_charging() {
     char charging_status[12];
