@@ -17,9 +17,9 @@ int check_charging() {
 }
 
 int check_threshold() {
-    char capacity_str[3];
+    char capacity_str[4];
     FILE *fp = fopen("/sys/class/power_supply/BAT0/capacity", "r");
-    fgets(capacity_str, 3, fp);
+    fgets(capacity_str, 4, fp);
     fclose(fp);
     int capacity = atoi(capacity_str);
     if (capacity <= threshold) {
