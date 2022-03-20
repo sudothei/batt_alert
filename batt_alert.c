@@ -4,7 +4,7 @@
 #include <unistd.h>
 
 int interval = 1;
-int threshold = 10;
+int threshold = 9;
 
 int check_charging() {
     char charging_status[12];
@@ -22,7 +22,7 @@ int check_threshold() {
     fgets(capacity_str, 4, fp);
     fclose(fp);
     int capacity = atoi(capacity_str);
-    if (capacity <= threshold) {
+    if (capacity < threshold) {
         return 1;
     }
 }
